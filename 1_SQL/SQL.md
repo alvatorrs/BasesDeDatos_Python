@@ -1,6 +1,6 @@
 # SQL y Python
 
-Utilizaremos sentencias SQL a traves de Python, por lo que utilizaremos el gestor de base de datos MySQL, utilizaremos la siquiente libreria: **PyMySQL**.
+Utilizaremos sentencias SQL a traves de Python, por lo que utilizaremos el gestor de base de datos MySQL, utilizaremos la siquiente libreria: [PyMySQL](https://pypi.org/project/PyMySQL/).
 
 Para ello primero crearemos nuestro entorno de desarrollo.
 
@@ -37,3 +37,19 @@ Para ello primero crearemos nuestro entorno de desarrollo.
 
 - Acceder a mysql por medio del usuario root:
 `mysql -u root -p`.
+
+##Variables de entorno
+
+Nos ayudan a evitar vulnerabilidades y salvaguardar nuestra información sensible.
+Para crear una variable de entorno en un sistema operativo basado en UNIX, crear variables de entorno es bastante sencillo.
+Nos colocamos en nuestra terminal y escribimos: 
+`export nombre_variable=valor_almacenado`.
+Ejemplos:
+- export USER_MYSQL=root
+- export PASSWORD_MYSQL=56208856
+- export DB_MYSQL=python_db
+
+En Python existen diferentes formas en las que podemos obtener valores de variables de entorno:
+- La forma más comun es con el modulo **os**.
+- Otra alternativa es utilizando el modulo [decouple](https://pypi.org/project/python-decouple/) que es fácil de utilizar y nos permite leer variables de entorno. Para instalarla utilizamos el comando:
+ `pip install python_decouple`.
